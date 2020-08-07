@@ -1,18 +1,18 @@
 {% set name = "bert-tensorflow" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 979ab38715be88bc95483654994c8bbb85acdbfdc60ca1a0ff90cfe8c8f95ea8
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 04db9319d96641269537eed360ff2c65d0188475832c1e4aa2962585a0c2962c
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -27,10 +27,10 @@ test:
     - bert
 
 about:
-  home: "https://github.com/google-research/bert"
+  home: https://github.com/google-research/bert
   license: Apache-2.0
   license_file: LICENSE
-  summary: "Python package required for fine-tuning Natural Language Processing use cases with google's BERT network."
+  summary: Python package required for fine-tuning Natural Language Processing use cases with google's BERT network.
   dev_url: https://github.com/google-research/bert
 
 extra:
