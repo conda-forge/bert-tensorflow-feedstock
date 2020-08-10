@@ -5,7 +5,7 @@ Home: https://github.com/google-research/bert
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Python package required for fine-tuning Natural Language Processing use cases with google's BERT network.
 
